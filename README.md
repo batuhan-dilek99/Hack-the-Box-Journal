@@ -13,3 +13,10 @@ PORT   STATE SERVICE REASON         VERSION
 |_  Supported Methods: GET HEAD POST OPTIONS
 |_http-title: Did not follow redirect to http://photobomb.htb/
 ```
+When the website is visited, It is not available. We need to configure our local dns server to make possible to visit the website. <br/>
+``` sudo vi /etc/hosts```<br/>
+After opening the vi editor, insert: ```machine_ip photobomb.htb```. <br/>
+Now the website is visitable.<br/>
+It is possible to find ```photobomb.js``` when the source code is inspected.<br/>
+go to this URL : ```http://photobomb.htb/photobomb.js``` <br/>
+we can see that with this url : ```http://pH0t0:b0Mb!@photobomb.htb/printer``` we can log into the site with credentials. <br/>
