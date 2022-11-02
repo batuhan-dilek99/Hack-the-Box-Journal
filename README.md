@@ -5,4 +5,4 @@ My HTB nickname is -> daemonDisciple<br/>
 <br/>
 
 # BOXES
-- Photobomb (/Boxes/Photobomb.md)
+- [Photobomb](/Boxes/Photobomb.md)
