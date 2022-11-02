@@ -2,7 +2,7 @@
 ## Part 1 : Discovery
 ### Scanning
 I have scanned the ip address of the machine using nmap
-``` sudo nmap -sVC -T4 -p- machine_ip ```
+``` sudo nmap -sVC -T4 -p- machine_ip ```<br/>
 According to the nmap result there are 2 services serving on port 22 and port 80. <br/>
 ```
 PORT   STATE SERVICE REASON         VERSION
