@@ -7,3 +7,4 @@
 
 # BOXES
 - [Photobomb](/Boxes/Photobomb.md)
+- [Shoppy](/Boxes/Shoppy.md)
