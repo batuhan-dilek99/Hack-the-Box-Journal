@@ -116,7 +116,7 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-Last login: Thu Nov  3 08:08:12 2022 from 10.10.14.221
+Last login: Thu Nov  3 08:08:12 2022 from your_ip
 jaeger@shoppy:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  ShoppyApp  shoppy_start.sh  Templates  user.txt  Videos
 
