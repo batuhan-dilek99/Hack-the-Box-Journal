@@ -95,7 +95,7 @@ We can see that there are some login and admin directories that opens a new page
 - go to http://shoppy.htb/login
 - enter ```admin'||'1=1``` into username
 This will bring us the admin page that we can search anything in the admin page. <br/>
-- I have decided to use ```admin'||'1=1``` once again here to see if there are anything hidden in the Database.
+- I have decided to use ```admin'||'1=1``` here once again to see if there are anything hidden in the Database.
 - This gives us a download button which will download some creds about the users.
 - Crack the hashes using hash crackers.
 - This will give you the joshes' password.
