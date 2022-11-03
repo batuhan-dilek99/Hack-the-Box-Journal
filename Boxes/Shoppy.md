@@ -121,4 +121,4 @@ jaeger@shoppy:~$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  ShoppyApp  shoppy_start.sh  Templates  user.txt  Videos
 
 ```
-- execute ```cat user.txt``` to recover the user flag.
+- execute ```cat user.txt``` to capture the user flag.
